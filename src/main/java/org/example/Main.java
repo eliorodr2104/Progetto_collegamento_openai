@@ -13,7 +13,7 @@ public class Main {
         prova = scanner.nextLine();
 
         OpenAi openAi = new OpenAi(prova,
-                "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");
+                "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");
 
         openAi.risultatoOpenAi();
     }

@@ -30,18 +30,23 @@ public class OpenAi {
                 .prompt(inputOpenAi)
                 .model("text-davinci-003")
                 .echo(false)
-                .maxTokens(1500)
-                .topP(1.0)
-                .temperature(0.7)
                 .build();
 
+        /*
         try{
             openAiService.createCompletion(completionRequest).getChoices().forEach(System.out::println);
         }catch (Exception e){
-            System.out.println("Prova: ");
-            risultatoOpenAi();
+            try {
+                Thread.sleep(5000);
+                System.out.println("Prova: ");
+                risultatoOpenAi();
+            } catch (InterruptedException ex) {
+                throw new RuntimeException(ex);
+            }
         }
-        //openAiService.createEdit(editRequest).getChoices().forEach(System.out::println);
+
+         */
+        openAiService.createEdit(editRequest).getChoices().forEach(System.out::println);
     }
 
     public void setInputOpenAi(String inputOpenAi) {
